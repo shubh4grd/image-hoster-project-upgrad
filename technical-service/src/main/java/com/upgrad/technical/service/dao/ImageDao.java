@@ -44,6 +44,7 @@ public class ImageDao {
 
     public ImageEntity updateImage(final ImageEntity imageEntity) {
         entityManager.merge(imageEntity);
+
         return imageEntity;
     }
 }

@@ -32,6 +32,7 @@ public class AdminService {
                 if (imageEntity == null) {
                     throw new ImageNotFoundException("IMG-001", "Image with Uuid not found");
                 }else {
+
                     return imageEntity;
                 }
             }
@@ -57,6 +58,7 @@ public class AdminService {
                     updateImageEntity.setDescription(imageEntity.getDescription());
                     updateImageEntity.setStatus(imageEntity.getStatus());
                     imageDao.updateImage(updateImageEntity);
+
                     return updateImageEntity;
                 }
             }

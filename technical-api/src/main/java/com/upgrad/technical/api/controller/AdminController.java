@@ -29,6 +29,7 @@ public class AdminController {
         final ImageEntity imageEntity = adminService.getImage(imageUuid, authorization);
 
         ImageDetailsResponse imageDetailsResponse = new ImageDetailsResponse().image(imageEntity.getImage()).id((int) imageEntity.getId()).name(imageEntity.getName()).description(imageEntity.getDescription()).status(imageEntity.getStatus());
+
         return new ResponseEntity<ImageDetailsResponse>(imageDetailsResponse, HttpStatus.OK);
     }
 
@@ -46,7 +47,8 @@ public class AdminController {
 
         ImageEntity updatedimageEntity = adminService.updateImage(imageEntity, authorization);
         UpdateImageResponse updateImageResponse = new UpdateImageResponse().id((int) updatedimageEntity.getId()).status(updatedimageEntity.getStatus());
-        return new ResponseEntity<UpdateImageResponse>(updateImageResponse,HttpStatus.OK);
+
+        areturn new ResponseEntity<UpdateImageResponse>(updateImageResponse,HttpStatus.OK);
     }
 
 }
